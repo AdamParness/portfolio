@@ -14,8 +14,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0066cc',
-                        secondary: '#004080',
+                        primary: '#0052CC',
+                        secondary: '#0747A6',
                     }
                 }
             }
@@ -32,18 +32,18 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #172B4D;
+            background-color: #F7FAFC;
         }
 
         a {
             text-decoration: none;
-            color: #0066cc;
+            color: #0052CC;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #004080;
+            color: #0747A6;
         }
 
         img {
@@ -476,68 +476,59 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-offwhite text-darkblue">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <nav class="flex justify-between items-center py-5">
-                <div class="text-2xl font-bold text-gray-800">Adam</div>
+                <div class="text-2xl font-bold text-darkblue">Adam</div>
                 <ul class="hidden md:flex space-x-8">
-                    <li><a href="#home" class="text-gray-700 font-medium hover:text-primary transition-colors">Home</a></li>
-                    <li><a href="#projects" class="text-gray-700 font-medium hover:text-primary transition-colors">Projects</a></li>
-                    <li><a href="#about" class="text-gray-700 font-medium hover:text-primary transition-colors">About</a></li>
-                    <li><a href="#contact" class="text-gray-700 font-medium hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="#home" class="text-darkblue font-medium hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#projects" class="text-darkblue font-medium hover:text-primary transition-colors">Projects</a></li>
+                    <li><a href="#about" class="text-darkblue font-medium hover:text-primary transition-colors">About</a></li>
+                    <li><a href="#contact" class="text-darkblue font-medium hover:text-primary transition-colors">Contact</a></li>
                 </ul>
-                <div class="md:hidden text-2xl cursor-pointer">☰</div>
+                <div class="md:hidden text-2xl cursor-pointer text-darkblue">☰</div>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gray-100 py-20">
+    <section id="home" class="bg-lightblue py-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hi, I'm Adam</h1>
-                    <p class="text-xl text-gray-600 mb-6">A passionate developer creating beautiful and functional web experiences</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-navy mb-4">Hi, I'm Adam</h1>
+                    <p class="text-xl text-darkblue mb-6">A passionate developer creating beautiful and functional web experiences</p>
                     <a href="#projects" class="bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded transition-colors duration-300">View My Work</a>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="bg-gray-300 h-80 w-full rounded-lg flex items-center justify-center">Profile Image Placeholder</div>
+                    <div class="bg-white h-80 w-full rounded-lg shadow-lg flex items-center justify-center">Profile Image Placeholder</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <section id="projects" class="bg-white py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="bg-gray-300 h-48 flex items-center justify-center">Project Image Placeholder</div>
+                <!-- Project Cards -->
+                <div class="bg-lightblue rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <img src="images/cat-dog-classifier.png" alt="Cat Dog Classifier Project" class="bg-white h-48 w-full object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Website</h3>
-                        <p class="text-gray-600 mb-4">A fully responsive online store with shopping cart functionality and payment integration.</p>
+                        <h3 class="text-xl font-bold text-navy mb-2">Cat Dog Image Classifier</h3>
+                        <p class="text-darkblue mb-4">A web application that classifies images as either cats or dogs using a deep learning model based on MobileNetV2.</p>
                         <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">View Project</a>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="bg-gray-300 h-48 flex items-center justify-center">Project Image Placeholder</div>
+                <!-- Repeat for other project cards with the same styling -->
+                <div class="bg-lightblue rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="bg-white h-48 flex items-center justify-center">Project Image Placeholder</div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Portfolio Design</h3>
-                        <p class="text-gray-600 mb-4">A minimalist portfolio website designed for a professional photographer.</p>
-                        <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">View Project</a>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="bg-gray-300 h-48 flex items-center justify-center">Project Image Placeholder</div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management App</h3>
-                        <p class="text-gray-600 mb-4">A productivity application built with React for organizing and tracking tasks.</p>
+                        <h3 class="text-xl font-bold text-navy mb-2">Portfolio Design</h3>
+                        <p class="text-darkblue mb-4">A minimalist portfolio website designed for a professional photographer.</p>
                         <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">View Project</a>
                     </div>
                 </div>
@@ -546,27 +537,27 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-gray-100 py-20">
+    <section id="about" class="bg-lightblue py-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-                    <div class="bg-gray-300 h-96 w-full rounded-lg flex items-center justify-center">About Image Placeholder</div>
+                    <div class="bg-white h-96 w-full rounded-lg shadow-lg flex items-center justify-center">About Image Placeholder</div>
                 </div>
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
-                    <p class="text-gray-600 mb-4">I'm a passionate web developer with over 5 years of experience creating beautiful, functional websites and applications. I specialize in front-end development, with expertise in HTML, CSS, JavaScript, and modern frameworks.</p>
-                    <p class="text-gray-600 mb-6">When I'm not coding, you can find me hiking in the mountains, reading science fiction, or experimenting with new cooking recipes.</p>
+                    <h2 class="text-3xl font-bold text-navy mb-4">About Me</h2>
+                    <p class="text-darkblue mb-4">I'm a passionate web developer with over 5 years of experience creating beautiful, functional websites and applications. I specialize in front-end development, with expertise in HTML, CSS, JavaScript, and modern frameworks.</p>
+                    <p class="text-darkblue mb-6">When I'm not coding, you can find me hiking in the mountains, reading science fiction, or experimenting with new cooking recipes.</p>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">My Skills</h3>
+                        <h3 class="text-xl font-bold text-navy mb-3">My Skills</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">HTML5</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">CSS3</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">UI/UX Design</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Responsive Design</span>
-                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">SEO</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">HTML5</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">CSS3</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">JavaScript</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">React</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">Node.js</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">UI/UX Design</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">Responsive Design</span>
+                            <span class="bg-white text-primary px-3 py-1 rounded-full text-sm shadow-sm">SEO</span>
                         </div>
                     </div>
                 </div>
@@ -575,33 +566,33 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="bg-white py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12">Get In Touch</h2>
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Let's Work Together</h3>
-                    <p class="text-gray-600 mb-6">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Let's Work Together</h3>
+                    <p class="text-darkblue mb-6">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
                     <div class="mb-4">
-                        <p class="text-gray-800"><strong>Email:</strong> adam@example.com</p>
+                        <p class="text-darkblue"><strong>Email:</strong> adamparness726@gmail.com</p>
                     </div>
                     <div class="mb-4">
-                        <p class="text-gray-800"><strong>Phone:</strong> (123) 456-7890</p>
+                        <p class="text-darkblue"><strong>Phone:</strong> (650) 278-5902</p>
                     </div>
                     <div class="mb-6">
-                        <p class="text-gray-800"><strong>Location:</strong> New York, NY</p>
+                        <p class="text-darkblue"><strong>Location:</strong> San Mateo, CA</p>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="https://github.com/" target="_blank" class="text-gray-700 hover:text-primary transition-colors">
+                        <a href="https://github.com/AdamParness" target="_blank" class="text-darkblue hover:text-primary transition-colors">
                             <i class="fab fa-github text-3xl"></i>
                         </a>
-                        <a href="https://linkedin.com/" target="_blank" class="text-gray-700 hover:text-primary transition-colors">
+                        <a href="https://www.linkedin.com/in/adam-parness/" target="_blank" class="text-darkblue hover:text-primary transition-colors">
                             <i class="fab fa-linkedin text-3xl"></i>
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <form action="https://formsubmit.co/adamparness726@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/6073bf12fa0c177f34842cfde7d68d40" method="POST" class="bg-lightblue p-6 rounded-lg shadow-lg">
                         <!-- Honeypot -->
                         <input type="text" name="_honey" style="display: none;">
                         <!-- Disable Captcha -->
@@ -610,22 +601,22 @@
                         <input type="hidden" name="_next" value="https://adamparness.github.io/portfolio/thanks.html">
                         
                         <div class="mb-4">
-                            <label for="name" class="block text-gray-700 mb-2">Name</label>
-                            <input type="text" name="name" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            <label for="name" class="block text-navy mb-2">Name</label>
+                            <input type="text" name="name" id="name" class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" required>
                         </div>
                         <div class="mb-4">
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" name="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            <label for="email" class="block text-navy mb-2">Email</label>
+                            <input type="email" name="email" id="email" class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" required>
                         </div>
                         <div class="mb-4">
-                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                            <input type="text" name="subject" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            <label for="subject" class="block text-navy mb-2">Subject</label>
+                            <input type="text" name="subject" id="subject" class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" required>
                         </div>
                         <div class="mb-6">
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                            <label for="message" class="block text-navy mb-2">Message</label>
+                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" required></textarea>
                         </div>
-                        <button type="submit" class="bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded transition-colors duration-300">Send Message</button>
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded transition-colors duration-300">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -633,41 +624,41 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Adam</h2>
-                    <p>Creating beautiful digital experiences</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <footer class="bg-navy text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Adam</h2>
+                    <p class="text-gray-300 mb-6">Creating beautiful digital experiences</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="GitHub">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <div>
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Resources</h3>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Resume</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Resume</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
                 <p>&copy; 2025 Adam. All rights reserved.</p>
             </div>
         </div>
