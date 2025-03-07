@@ -482,13 +482,13 @@
         <div class="container mx-auto px-4">
             <nav class="flex justify-between items-center py-5">
                 <div class="text-2xl font-bold text-darkblue">Adam</div>
-                <ul class="hidden md:flex space-x-8">
+                <ul class="nav-links hidden md:flex space-x-8">
                     <li><a href="#home" class="text-darkblue font-medium hover:text-primary transition-colors">Home</a></li>
                     <li><a href="#projects" class="text-darkblue font-medium hover:text-primary transition-colors">Projects</a></li>
                     <li><a href="#about" class="text-darkblue font-medium hover:text-primary transition-colors">About</a></li>
                     <li><a href="#contact" class="text-darkblue font-medium hover:text-primary transition-colors">Contact</a></li>
                 </ul>
-                <div class="md:hidden text-2xl cursor-pointer text-darkblue">☰</div>
+                <div class="hamburger md:hidden text-2xl cursor-pointer text-darkblue">☰</div>
             </nav>
         </div>
     </header>
@@ -499,11 +499,13 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold text-navy mb-4">Hi, I'm Adam</h1>
-                    <p class="text-xl text-darkblue mb-6">A passionate developer creating beautiful and functional web experiences</p>
+                    <p class="text-xl text-darkblue mb-6">A passionate AI/ML developer creating beautiful and functional web experiences</p>
                     <a href="#projects" class="bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded transition-colors duration-300">View My Work</a>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="bg-white h-80 w-full rounded-lg shadow-lg flex items-center justify-center">Profile Image Placeholder</div>
+                    <div class="bg-white h-80 w-full rounded-lg shadow-lg overflow-hidden">
+                        <img src="images/profile-icon.jpg" alt="Profile Icon" class="w-full h-full object-cover rounded-lg">
+                    </div>
                 </div>
             </div>
         </div>
@@ -516,20 +518,31 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Cards -->
                 <div class="bg-lightblue rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <img src="images/cat-dog-classifier.png" alt="Cat Dog Classifier Project" class="bg-white h-48 w-full object-cover">
+                    <div class="bg-white h-48 flex items-center justify-center overflow-hidden">
+                        <img src="images/cat-dog-classifier.png" alt="Cat Dog Classifier Project" class="h-auto w-auto max-h-full max-w-full object-contain">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-navy mb-2">Cat Dog Image Classifier</h3>
                         <p class="text-darkblue mb-4">A web application that classifies images as either cats or dogs using a deep learning model based on MobileNetV2.</p>
-                        <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">View Project</a>
+                        <button class="open-modal inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300" data-project="catdog">View Project</button>
                     </div>
                 </div>
-                <!-- Repeat for other project cards with the same styling -->
+                <!-- Portfolio Design Project -->
                 <div class="bg-lightblue rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <div class="bg-white h-48 flex items-center justify-center">Project Image Placeholder</div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-navy mb-2">Portfolio Design</h3>
                         <p class="text-darkblue mb-4">A minimalist portfolio website designed for a professional photographer.</p>
-                        <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">View Project</a>
+                        <button class="open-modal inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300" data-project="portfolio">View Project</button>
+                    </div>
+                </div>
+                <!-- E-commerce Project -->
+                <div class="bg-lightblue rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="bg-white h-48 flex items-center justify-center">Project Image Placeholder</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-2">E-commerce Website</h3>
+                        <p class="text-darkblue mb-4">A fully responsive online store with shopping cart functionality and payment integration.</p>
+                        <button class="open-modal inline-block bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300" data-project="ecommerce">View Project</button>
                     </div>
                 </div>
             </div>
@@ -592,7 +605,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <form action="https://formsubmit.co/6073bf12fa0c177f34842cfde7d68d40" method="POST" class="bg-lightblue p-6 rounded-lg shadow-lg">
+                    <form action="https://formsubmit.co/adamparness726@gmail.com" method="POST" class="bg-lightblue p-6 rounded-lg shadow-lg">
                         <!-- Honeypot -->
                         <input type="text" name="_honey" style="display: none;">
                         <!-- Disable Captcha -->
@@ -631,10 +644,10 @@
                     <h2 class="text-2xl font-bold mb-4">Adam</h2>
                     <p class="text-gray-300 mb-6">Creating beautiful digital experiences</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="GitHub">
+                        <a href="https://github.com/AdamParness" target="_blank" class="text-gray-300 hover:text-white transition-colors" aria-label="GitHub">
                             <i class="fab fa-github text-2xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/adam-parness/" target="_blank" class="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
                             <i class="fab fa-linkedin text-2xl"></i>
                         </a>
                     </div>
@@ -664,26 +677,205 @@
         </div>
     </footer>
 
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-navy bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-3/4 lg:w-1/2 max-h-90vh overflow-y-auto">
+            <!-- Modal Header -->
+            <div class="bg-primary text-white px-6 py-4 rounded-t-lg">
+                <div class="flex justify-between items-center">
+                    <h3 id="modalTitle" class="text-xl font-bold">Project Title</h3>
+                    <button id="closeModal" class="text-white hover:text-lightblue focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-6">
+                <!-- Tools Section -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-navy mb-2">Tools</h4>
+                    <div id="modalTools" class="flex flex-wrap gap-2">
+                        <!-- Tool tags will be inserted here dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Overview Section -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-navy mb-2">Overview</h4>
+                    <p id="modalOverview" class="text-darkblue">Project overview text will appear here.</p>
+                </div>
+                
+                <!-- More Info Section -->
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold text-navy mb-2">More Info</h4>
+                    <p id="modalMoreInfo" class="text-darkblue">Additional project information will appear here.</p>
+                </div>
+                
+                <!-- Links Section -->
+                <div>
+                    <h4 class="text-lg font-bold text-navy mb-2">Links</h4>
+                    <div id="modalLinks" class="flex gap-4">
+                        <!-- Links will be inserted here dynamically -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="bg-lightblue px-6 py-4 rounded-b-lg flex justify-end">
+                <button id="closeModalBtn" class="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors duration-300">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Simple JavaScript for mobile menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+        // Wait for the DOM to be fully loaded before attaching event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Script loaded!');
+            console.log('Modal element exists:', !!document.getElementById('projectModal'));
+            console.log('Open modal buttons:', document.querySelectorAll('.open-modal').length);
+            
+            // Project Modal Functionality
+            const projectData = {
+                catdog: {
+                    title: "Cat Dog Image Classifier",
+                    tools: ["Python", "TensorFlow", "FastAPI", "HTML", "Bootstrap", "JavaScript"],
+                    overview: "A web application that classifies images as either cats or dogs using a deep learning model based on MobileNetV2. Users can upload their own images and get instant classification results.",
+                    moreInfo: "This project uses transfer learning with a pre-trained MobileNetV2 model fine-tuned on a dataset of cat and dog images. The model achieves over 95% accuracy on test data. The web interface is built with FastAPI and provides a user-friendly experience for uploading and classifying images.",
+                    links: {
+                        github: "https://github.com/AdamParness/cat-dog-classifier",
+                        demo: "https://cat-dog-classifier-s6g2.onrender.com/"
+                    }
+                },
+                portfolio: {
+                    title: "Portfolio Design",
+                    tools: ["HTML5", "CSS3", "JavaScript", "Figma", "Photoshop"],
+                    overview: "A minimalist portfolio website designed for a professional photographer. The design focuses on showcasing the photographer's work with a clean, elegant interface.",
+                    moreInfo: "This project involved creating a custom design in Figma, implementing responsive layouts, and optimizing image loading for performance. The site includes a gallery with filtering options, contact form, and client testimonials section.",
+                    links: {
+                        github: "https://github.com/AdamParness/photographer-portfolio",
+                        demo: "https://photographer-portfolio-demo.netlify.app"
+                    }
+                },
+                ecommerce: {
+                    title: "E-commerce Website",
+                    tools: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "MongoDB"],
+                    overview: "A fully responsive online store with shopping cart functionality and payment integration. This project demonstrates my ability to create complex, interactive web applications.",
+                    moreInfo: "This e-commerce platform includes user authentication, product filtering, shopping cart management, and secure payment processing. The admin panel allows for easy product and inventory management.",
+                    links: {
+                        github: "https://github.com/AdamParness/react-ecommerce",
+                        demo: "https://react-ecommerce-demo.netlify.app"
+                    }
+                }
+            };
 
-        // Smooth scroll function
-        function smoothScroll(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
+            // Function to open project modal
+            function openProjectModal(projectId) {
+                console.log('openProjectModal called with:', projectId);
+                const project = projectData[projectId];
+                
+                // Populate modal with project data
+                document.getElementById('modalTitle').textContent = project.title;
+                
+                // Populate tools
+                const toolsContainer = document.getElementById('modalTools');
+                toolsContainer.innerHTML = '';
+                project.tools.forEach(tool => {
+                    const toolSpan = document.createElement('span');
+                    toolSpan.className = 'bg-accent text-primary px-3 py-1 rounded-full text-sm shadow-sm';
+                    toolSpan.textContent = tool;
+                    toolsContainer.appendChild(toolSpan);
+                });
+                
+                // Populate overview and more info
+                document.getElementById('modalOverview').textContent = project.overview;
+                document.getElementById('modalMoreInfo').textContent = project.moreInfo;
+                
+                // Populate links
+                const linksContainer = document.getElementById('modalLinks');
+                linksContainer.innerHTML = '';
+                
+                if (project.links.github) {
+                    const githubLink = document.createElement('a');
+                    githubLink.href = project.links.github;
+                    githubLink.target = '_blank';
+                    githubLink.rel = 'noopener noreferrer';
+                    githubLink.className = 'flex items-center text-primary hover:text-secondary transition-colors';
+                    githubLink.innerHTML = '<i class="fab fa-github text-xl mr-2"></i> GitHub';
+                    linksContainer.appendChild(githubLink);
+                }
+                
+                if (project.links.demo) {
+                    const demoLink = document.createElement('a');
+                    demoLink.href = project.links.demo;
+                    demoLink.target = '_blank';
+                    demoLink.rel = 'noopener noreferrer';
+                    demoLink.className = 'flex items-center text-primary hover:text-secondary transition-colors';
+                    demoLink.innerHTML = '<i class="fas fa-external-link-alt text-lg mr-2"></i> Demo';
+                    linksContainer.appendChild(demoLink);
+                }
+                
+                // Show modal
+                document.getElementById('projectModal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+            }
+            
+            // Function to close modal
+            function closeModal() {
+                document.getElementById('projectModal').classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+            
+            // Simple JavaScript for mobile menu toggle
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
             });
-            // Close mobile menu if open
-            document.querySelector('.nav-links').classList.remove('active');
-        }
 
-        // Add smooth scroll to all navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', smoothScroll);
+            // Smooth scroll function
+            function smoothScroll(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.querySelector('.nav-links').classList.remove('active');
+            }
+
+            // Add smooth scroll to all navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', smoothScroll);
+            });
+
+            // Open modal when "View Project" is clicked
+            document.querySelectorAll('.open-modal').forEach(button => {
+                console.log('Adding click listener to button:', button);
+                button.addEventListener('click', function() {
+                    console.log('Button clicked!', this.getAttribute('data-project'));
+                    const projectId = this.getAttribute('data-project');
+                    openProjectModal(projectId);
+                });
+            });
+
+            // Close modal when close button is clicked
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+            
+            // Close modal when clicking outside the modal content
+            document.getElementById('projectModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+            
+            // Close modal when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !document.getElementById('projectModal').classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>

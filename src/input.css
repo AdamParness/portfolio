@@ -10,3 +10,8 @@
 }
 
 /* Custom styles can go here */ 
+@layer utilities {
+  .max-h-90vh {
+    max-height: 90vh;
+  }
+} 
